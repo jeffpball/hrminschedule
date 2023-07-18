@@ -1,43 +1,91 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+export const createSchedule = /* GraphQL */ `
+  mutation CreateSchedule(
+    $input: CreateScheduleInput!
+    $condition: ModelScheduleConditionInput
   ) {
-    createTodo(input: $input, condition: $condition) {
+    createSchedule(input: $input, condition: $condition) {
       id
-      name
-      description
+      month
+      year
+      masses {
+        id
+        time
+        days {
+          id
+          date
+          breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+        }
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const updateSchedule = /* GraphQL */ `
+  mutation UpdateSchedule(
+    $input: UpdateScheduleInput!
+    $condition: ModelScheduleConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    updateSchedule(input: $input, condition: $condition) {
       id
-      name
-      description
+      month
+      year
+      masses {
+        id
+        time
+        days {
+          id
+          date
+          breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+        }
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
+export const deleteSchedule = /* GraphQL */ `
+  mutation DeleteSchedule(
+    $input: DeleteScheduleInput!
+    $condition: ModelScheduleConditionInput
   ) {
-    deleteTodo(input: $input, condition: $condition) {
+    deleteSchedule(input: $input, condition: $condition) {
       id
-      name
-      description
+      month
+      year
+      masses {
+        id
+        time
+        days {
+          id
+          date
+          breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+        }
+      }
       createdAt
       updatedAt
     }

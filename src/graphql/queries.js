@@ -1,28 +1,60 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
+export const getSchedule = /* GraphQL */ `
+  query GetSchedule($id: ID!) {
+    getSchedule(id: $id) {
       id
-      name
-      description
+      month
+      year
+      masses {
+        id
+        time
+        days {
+          id
+          date
+          breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+        }
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
+export const listSchedules = /* GraphQL */ `
+  query ListSchedules(
+    $filter: ModelScheduleFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listSchedules(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
-        description
+        month
+        year
+        masses {
+          id
+          time
+          days {
+            id
+            date
+            breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+          }
+        }
         createdAt
         updatedAt
       }

@@ -1,11 +1,29 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
+body {
+  background-image: url(hred.jpeg);
+  background-attachment: fixed;
+}
+/* #app {
+  width: 600px;
+  margin: 100px auto;
   padding: 2rem;
-
+  background-color: rgb(255, 255, 255, .97);
   font-weight: normal;
+  border-radius: 10px;
+} */
+
+#app {
+  width: 100%;
+}
+
+#scheduleComponent {
+  width: 600px;
+  margin: 30px auto 0px auto;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255, .97);
+  font-weight: normal;
+  border-radius: 10px;
 }
 
 a,
@@ -13,6 +31,144 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.header {
+  margin-top: 30px ;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-schedule-button {
+  width: 250px;
+  margin: 50px 0px;
+  align-self: center;
+}
+
+.day {
+  background-color: rgb(137, 137, 137, .15);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.mass-time {
+  font-weight: 600;
+}
+
+.bread-minister-name {
+  background-color: rgba(0, 179, 255, 0.13);
+  padding: 0 5px;
+  margin: 3px 5px 0px 5px;
+  border-radius: 3px;
+}
+
+.cup-minister-name {
+  background-color: rgba(255, 0, 89, 0.13);
+  padding: 0 5px;
+  margin: 3px 5px 0px 5px;
+  border-radius: 3px;
+}
+
+.authbackground {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.togglezindexbelow {
+  position: relative;
+  z-index: .9 !important;
+  opacity: .9;
+  filter: blur(3px);
+  background-color: rgba(146, 146, 146, 0.797) !important;
+}
+
+.togglezindexabove {
+  display: inline-block !important;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.displaySignout {
+  display: block !important;
+  margin-top: 0px !important;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: gray;
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* loader animation */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+.home-signin-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.home-signin-button:hover {
+  color: rgb(85, 85, 85);
+  text-decoration: underline;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.outlineonhover:hover {
+  background-color: rgba(128, 128, 128, 0.14);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media (hover: hover) {
@@ -24,11 +180,11 @@ a,
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
+    flex: row;
   }
 
   #app {
-    display: grid;
-    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
   }
 }

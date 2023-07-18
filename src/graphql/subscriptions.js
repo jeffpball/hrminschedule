@@ -1,34 +1,82 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateTodo = /* GraphQL */ `
-  subscription OnCreateTodo($filter: ModelSubscriptionTodoFilterInput) {
-    onCreateTodo(filter: $filter) {
+export const onCreateSchedule = /* GraphQL */ `
+  subscription OnCreateSchedule($filter: ModelSubscriptionScheduleFilterInput) {
+    onCreateSchedule(filter: $filter) {
       id
-      name
-      description
+      month
+      year
+      masses {
+        id
+        time
+        days {
+          id
+          date
+          breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+        }
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateTodo = /* GraphQL */ `
-  subscription OnUpdateTodo($filter: ModelSubscriptionTodoFilterInput) {
-    onUpdateTodo(filter: $filter) {
+export const onUpdateSchedule = /* GraphQL */ `
+  subscription OnUpdateSchedule($filter: ModelSubscriptionScheduleFilterInput) {
+    onUpdateSchedule(filter: $filter) {
       id
-      name
-      description
+      month
+      year
+      masses {
+        id
+        time
+        days {
+          id
+          date
+          breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+        }
+      }
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteTodo = /* GraphQL */ `
-  subscription OnDeleteTodo($filter: ModelSubscriptionTodoFilterInput) {
-    onDeleteTodo(filter: $filter) {
+export const onDeleteSchedule = /* GraphQL */ `
+  subscription OnDeleteSchedule($filter: ModelSubscriptionScheduleFilterInput) {
+    onDeleteSchedule(filter: $filter) {
       id
-      name
-      description
+      month
+      year
+      masses {
+        id
+        time
+        days {
+          id
+          date
+          breadMinisters {
+            id
+            name
+          }
+          cupMinisters {
+            id
+            name
+          }
+        }
+      }
       createdAt
       updatedAt
     }
