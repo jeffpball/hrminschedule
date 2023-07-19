@@ -180,7 +180,7 @@
 
       <div style="margin:20px">
         <button v-on:click="cancelCreateSchedule()" style="margin-right:20px">Cancel</button>
-        <button v-on:click="testcreateSchedule()">Save schedule</button>
+        <button v-on:click="createSchedule()">Save schedule</button>
       </div>
      
   </div>
@@ -225,28 +225,8 @@
     },
     methods: {
         testcreateSchedule(){
-      //   const vmschedule = this.vmschedules[0];
-      //   const vmmasses = this.vmschedules[0].masses;
-      
-      //  let scheduleParams = {};
-      //   scheduleParams.month = vmschedule.month;
-      //   scheduleParams.year = vmschedule.year;
-      //   scheduleParams.masses = [];
-
-      //   for (const mass of vmmasses) {
-      //     const id = uuid.v4()
-      //     scheduleParams.masses.push({
-      //       id: id,
-      //       time: mass.time,
-      //       days: []
-      //     })
-          
-      //     // mass.days.forEach(element => {
-            
-      //     // });
-      //   }
-        
-        console.log(this.authenticated)
+  
+        console.log("testcreateSchedule method called");
         
       },
       async createSchedule() {
@@ -283,7 +263,6 @@
               return new Date(a.createdAt) - new Date(b.createdAt);
         });
         this.loaded = true;
-        console.log(this.schedules)
       },
       addSchedule() {
         this.vmschedules.push({
